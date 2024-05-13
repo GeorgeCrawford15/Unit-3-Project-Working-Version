@@ -1,0 +1,553 @@
+/* Feel free to change any of the styling below!*/
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://live.staticflickr.com/2444/4081217898_b7bae8fdba_z.jpg);
+}
+
+/* Style the body with a background color or image if desired */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+.planet-one-button:hover,
+.planet-two-button:hover,
+.explore:hover,
+.leave:hover,
+.restart:hover,
+.left:hover,
+.right:hover,
+.pick-plant:hover,
+.go-back:hover,
+.leave-hyperion:hover,
+.pick-poisonous-plant:hover,
+.go-back1:hover,
+.restart1:hover,
+.right1:hover,
+.restart2:hover {
+    background-color: #0056b3;
+}
+
+
+.scenario6 {
+  color: white;
+}
+
+.scenario6-image-container {
+  position: relative;
+  display: flex; /* Use flexbox for the container */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+  align-items: center; /* Center items vertically */
+}
+
+.scenario6-image-container img {
+  max-width: 45%;  /* Limit the maximum width of each image */
+  height: auto; /* Maintain aspect ratio */
+} 
+
+.planet-one {
+  width: 373px;
+  margin-bottom: 44vh;
+  margin-right: 5vw;
+  z-index: 0;
+}
+
+.planet-two {
+  width: 373px;
+  margin-top: 10vh;
+  margin-left: 35vw;
+  z-index: 1;
+}
+
+.ship3 {
+  position: relative;
+  z-index: 2;
+  width: 160px;
+  transform: rotate(90deg);
+  margin-top: 10vh;
+  right: 100%;
+  transition: 3s;
+}
+
+.planet-one-button,
+.planet-two-button,
+.explore,
+.leave,
+.restart,
+.left,
+.right,
+.pick-plant,
+.go-back,
+.leave-hyperion,
+.pick-poisonous-plant,
+.go-back1,
+.restart1,
+.right1,
+.restart2 {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+@keyframes ship-to-planet1 {
+  0% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(60deg);
+  }
+  100% {
+    transform: translate(17vw, -17vh) rotate(60deg) scale(0);
+  }
+}
+
+.move-to-planet-one {
+  animation: ship-to-planet1 2s ease-out;
+}
+
+@keyframes ship-to-planet2 {
+  0% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(60vw, 0) rotate(90deg);
+  }
+  100% {
+    transform: translate(80vw, 0) rotate(90deg) scale(0);
+  }
+}
+
+.move-to-planet-two {
+  animation: ship-to-planet2 3s ease-out;
+}
+
+.celestia-landing {
+  display: none;
+}
+
+.celestia-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.ship6 {
+  position: relative;
+  z-index: 1;
+  width: 90px;
+  margin-left: 400px;
+  margin-bottom: 80px;
+  height: auto;
+}
+
+.astronaut {
+  position: relative;
+  z-index: 2;
+  width: 50px;
+  margin-bottom: 80px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.celestia-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  border-radius: 10px;
+  margin-left: -570px;
+  height: auto;
+}
+
+.celestia-death {
+  display: none;
+}
+
+.celestia-death-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.astronaut1 {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: auto;
+  transform: rotate(90deg) scaleX(-1) scaleY(-1);
+  margin-left: 450px;
+  margin-bottom: 80px;
+}
+
+.celestia-landscape1 {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -620px;
+}
+
+.hyperion-landing {
+  display: none;
+}
+
+.hyperion-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.ship7 {
+  position: relative;
+  z-index: 2;
+  width: 90px;
+  height: auto;
+  margin-left: 400px;
+  margin-bottom: 70px;
+}
+
+.astronaut2 {
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: auto;
+  margin-left: 450px;
+  margin-bottom: 80px;
+}
+
+.hyperion-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -1000px;
+}
+
+@keyframes going-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-24.5vw, 0) scale(0.4);
+  }
+}
+
+.going-left {
+  animation: going-left 3s ease-in;
+}
+
+@keyframes going-right {
+  0% {
+    transform: translate(0, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(22vw, 0) scaleX(-1) scale(0.2);
+  }
+}
+
+.going-right {
+  animation: going-right 3s ease-in;
+}
+
+.went-left {
+  display: none;
+}
+
+.went-left-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.went-left h2 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.astronaut3 {
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: auto;
+  margin-left: 100px;
+}
+
+.plant {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: auto;
+  margin-left: 300px;
+  margin-bottom: 5px;
+}
+
+.left-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -600px;
+}
+
+@keyframes picking-plant {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-180px, 0);
+  }
+}
+
+.picking-plant {
+  animation: picking-plant 3s forwards;
+}
+
+@keyframes plant-picked {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -30px)
+  }
+}
+
+.plant-picked {
+  animation: plant-picked 3s forwards;
+}
+
+@keyframes take-plant-back {
+  0% {
+    transform: translate(190px, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(820px, 0) scaleX(-1);
+  }
+}
+
+.take-plant-back {
+  animation: take-plant-back 3s ease-in;
+}
+
+.hyperion-landing-return {
+  display: none;
+}
+
+.hyperion-landing-return-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.hyperion-landing-return h2 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.ship8 {
+  position: relative;
+  z-index: 2;
+  width: 90px;
+  height: auto;
+  margin-left: 900px;
+  margin-bottom: 70px;
+}
+
+.returned-hyperion-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -1000px;
+}
+
+@keyframes fly-from-hyperion {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -500px);
+  }
+}
+
+.fly-from-hyperion {
+  animation: fly-from-hyperion 3s forwards;
+}
+
+.went-right {
+  display: none;
+}
+
+.went-right h2 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.went-right-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.astronaut4 {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: auto;
+  transform: scaleX(-1);
+  margin-bottom: 10px;
+}
+
+.poisonous-plant {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: auto;
+  margin-left: 350px;
+  margin-bottom: 20px;
+}
+
+.right-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -530px;
+}
+
+@keyframes death-from-plant {
+  0% {
+    transform: translate(0, 0) scaleX(-1);
+  }
+  50% {
+    transform: translate(390px, 0) scaleX(-1);
+  }
+  65% {
+    transform: translate(360px, 0) scaleX(-1);
+  }
+  75% {
+    transform: translate(340px, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(360px, 10px) scaleX(-1) rotate(90deg);
+  }
+}
+
+.death-from-plant {
+  animation: death-from-plant 4s forwards;
+}
+
+.restart1 {
+  display: none;
+  left: 46.5%;
+}
+
+@keyframes go-back-from-left {
+  0% {
+    transform: translate(10px, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(450px, 0) scaleX(-1);
+  }
+}
+
+.go-back-from-left {
+  animation: go-back-from-left 2s ease-in;
+}
+
+.hyperion-landing1 {
+  display: none;
+}
+
+.astronaut0 {
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: auto;
+  margin-left: 450px;
+  margin-bottom: 80px;
+}
+
+.decide-to-stay {
+  display: none;
+}
+
+.decide-to-stay-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.decide-to-stay h2 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.hyperion-landscape1 {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -980px;
+}
+
+.ship5 {
+  position: relative;
+  z-index: 2;
+  width: 90px;
+  height: auto;
+  margin-left: 230px;
+  margin-bottom: 70px;
+}
+
+.house {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: auto;
+  margin-left: 550px;
+  margin-bottom: 80px;
+}

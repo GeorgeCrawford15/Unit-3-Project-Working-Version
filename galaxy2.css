@@ -1,0 +1,582 @@
+/* Feel free to change any of the styling below!*/
+html {
+  margin: 0;
+  padding: 0;
+  background-image: url(https://live.staticflickr.com/2444/4081217898_b7bae8fdba_z.jpg);
+}
+
+/* Style the body with a background color or image if desired */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+.planet-three-button:hover,
+.planet-four-button:hover,
+.riddle-answer1:hover,
+.riddle-answer2:hover,
+.picked-wrong-button:hover,
+.stay-button:hover,
+.fly-button:hover,
+.restart:hover {
+  background-color: #0056b3;
+}
+
+
+.scenario5 {
+  color: white;
+}
+
+.scenario5-image-container {
+  position: relative;
+  display: flex;
+  /* Use flexbox for the container */
+  justify-content: space-around;
+  /* Distribute items evenly along the main axis */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.scenario5-image-container img {
+  max-width: 45%;
+  /* Limit the maximum width of each image */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.planet-three {
+  margin-bottom: 44vh;
+  margin-right: 5vw;
+  z-index: 0;
+}
+
+.planet-four {
+  width: 373px;
+  margin-top: 10vh;
+  margin-left: 35vw;
+  z-index: 1;
+}
+
+.ship4 {
+  position: relative;
+  z-index: 2;
+  width: 160px;
+  transform: rotate(90deg);
+  margin-top: 10vh;
+  right: 100%;
+  transition: 3s;
+}
+
+.planet-three-button,
+.planet-four-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  top: -5vh;
+}
+
+.riddle-answer1,
+.riddle-answer2,
+.picked-wrong-button,
+.stay-button,
+.fly-button,
+.restart {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+@keyframes ship-to-planet3 {
+  0% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(60deg);
+  }
+
+  100% {
+    transform: translate(15vw, -15vh) rotate(60deg) scale(0);
+  }
+}
+
+.move-to-planet-three {
+  animation: ship-to-planet3 3s ease-out;
+}
+
+@keyframes ship-to-planet4 {
+  0% {
+    transform: translate(0, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(60vw, 0) rotate(90deg);
+  }
+
+  100% {
+    transform: translate(80vw, 0) rotate(90deg) scale(0);
+  }
+}
+
+.move-to-planet-four {
+  animation: ship-to-planet4 3s ease-out;
+}
+
+.artroth-landing {
+  display: none;
+}
+
+.artroth-landing h2 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.artroth-landing-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.artroth-landing-ship {
+  position: relative;
+  z-index: 4;
+  width: 150px;
+  height: auto;
+}
+
+.artroth-landing-astronaut {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.alien {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: auto;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.artroth-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -790px;
+}
+
+.seratanium {
+  position: relative;
+  z-index: 3;
+  width: 60px;
+  height: auto;
+  margin-left: 370px;
+}
+
+@keyframes plant-being-given {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  90% {
+    transform: translate(-450px, 0);
+  }
+
+  100% {
+    transform: translate(-450px, 0) scale(0);
+  }
+}
+
+.plant-being-given {
+  animation: plant-being-given 2s forwards;
+}
+
+@keyframes move-to-ship {
+  0% {
+    transform: translate(0, 0) scaleX(1);
+  }
+
+  90% {
+    transform: translate(-100px, 0) scaleX(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.move-to-ship {
+  animation: move-to-ship 3s forwards;
+}
+
+@keyframes ship-leaving-artroth {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -600px);
+  }
+}
+
+.ship-leaving-artroth {
+  animation: ship-leaving-artroth 3s ease-in forwards;
+}
+
+.picked-wrong {
+  display: none;
+}
+
+@keyframes alien-leaving {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(220px, 0);
+  }
+}
+
+.alien-leaving {
+  animation: alien-leaving 3s forwards;
+}
+
+@keyframes seratanium-disappearing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.seratanium-disappearing {
+  animation: seratanium-disappearing 1s forwards;
+}
+
+.picked-wrong-image-container {
+  position: relative;
+  display: flex;
+  /* Use flexbox for the container */
+  justify-content: space-around;
+  /* Distribute items evenly along the main axis */
+  align-items: center;
+  /* Center items vertically */
+  max-width: 45%;
+}
+
+.picked-wrong-image-container img {
+  max-width: 45%;
+  /* Limit the maximum width of each image */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+
+.picked-wrong-ship {
+  position: relative;
+  z-index: 2;
+  width: 110px;
+  transform: rotate(90deg);
+  margin-top: 10vh;
+  right: 100%;
+  transition: 3s;
+}
+
+.picked-wrong-planet-three {
+  margin-bottom: 44vh;                         
+  margin-right: 5vw; 
+  /*margin-bottom: 419.32px;
+  margin-right: 96px;*/
+  z-index: 0;
+}
+
+.picked-wrong-planet-four {
+  width: 373px;
+  margin-top: 10vh;
+  margin-left: 35vw;
+  /*margin-top: 95.3px;
+  margin-left: 672px;*/
+  z-index: 1;
+}
+
+.aetheria-landing1 {
+  display: none;
+}
+
+.aetheria-landing1 h2 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.aetheria-landing1-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.aetheria-landing1-ship {
+  position: relative;
+  z-index: 4;
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.aetheria-landing1-astronaut {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  transform: scaleX(-1);
+  margin-bottom: 40px;
+}
+
+.aetheria-landscape1 {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -260px;
+}
+
+@keyframes exploring {
+  0% {
+    transform: translate(0, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(770px, 0) scaleX(-1);
+  }
+}
+
+.exploring {
+  animation: exploring 3s ease-in forwards;
+}
+
+.kept-exploring {
+  display: none;
+}
+
+.kept-exploring-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.kept-exploring-astronaut {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  transform: scaleX(-1);
+  margin-bottom: 100px;
+}
+
+.seratanium-on-aetheria {
+  position: relative;
+  z-index: 3;
+  width: 60px;
+  height: auto;
+  margin-bottom: 100px;
+  margin-left: 600px;
+}
+
+.aetheria-landscape2 {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -770px;
+}
+
+@keyframes getting-seratanium-on-aetheria {
+  0% {
+    transform: translate(0, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(657px, 0) scaleX(-1);
+  }
+}
+
+.getting-seratanium-on-aetheria {
+  animation: getting-seratanium-on-aetheria 3s ease-out forwards;
+}
+
+@keyframes seratanium-picked {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.seratanium-picked {
+  animation: seratanium-picked 1s forwards;
+}
+
+@keyframes return-to-ship-on-aetheria {
+  0% {
+    transform: translate(657px, 0) scaleX(1);
+  }
+  100% {
+    transform: translate(-25px, 0) scaleX(1);
+  }
+}
+
+.return-to-ship-on-aetheria {
+  animation: return-to-ship-on-aetheria 3s ease-in forwards;
+}
+
+.leaving-aetheria {
+  display: none;
+}
+
+.leaving-aetheria-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.leaving-aetheria-ship {
+  position: relative;
+  z-index: 4;
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+  margin-left: 150px;
+}
+
+.leaving-aetheria-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -200px;
+  margin-right: -100px;
+}
+
+.leaving-aetheria-astronaut {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  margin-bottom: 40px;
+  margin-right: 100px;
+}
+
+@keyframes walk-to-ship-on-aetheria {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  90% {
+    transform: translate(-800px, 0) scale(1);
+  }
+  100% {
+    transform: translate(-820px, 0) scale(0);
+  }
+}
+
+.walk-to-ship-on-aetheria {
+  animation: walk-to-ship-on-aetheria 3s ease-out forwards;
+}
+
+@keyframes flying-from-aetheria {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -600px);
+  }
+}
+
+.flying-from-aetheria {
+  animation: flying-from-aetheria 3s ease-in forwards;
+}
+
+.crash-landing {
+  display: none;
+}
+
+.crash-landing-image-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.crashed-ship {
+  position: relative;
+  z-index: 4;
+  width: 150px;
+  height: auto;
+  margin-bottom: 350px;
+  transform: rotate(135deg) scale(0.2);
+}
+
+.crash-landscape {
+  position: relative;
+  width: 1000px;
+  z-index: 0;
+  height: auto;
+  border-radius: 10px;
+  margin-left: -150px;
+}
+
+@keyframes crashing {
+  0% {
+    transform: translate(0, 0) rotate(135deg) scale(0.05);
+  }
+  100% {
+    transform: translate(350px, 350px) rotate(135deg) scale(0.8);
+  }
+}
+
+.crashing {
+  animation: crashing 2s ease-in forwards;
+}

@@ -1,0 +1,142 @@
+/* Feel free to change any of the styling below!*/
+html {
+    margin: 0;
+    padding: 0;
+  background-image: url(https://live.staticflickr.com/2444/4081217898_b7bae8fdba_z.jpg);
+}
+
+/* Style the body with a background color or image if desired */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+body, html {
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+h2 {
+  color: white;
+}
+
+/* Style the title of your story */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.return-home-image-container {
+  position: relative;
+  height: auto;
+}
+
+.return-home-image-container img {
+  /* Limit the maximum width of each image */
+  height: auto;
+  /* Maintain aspect ratio */
+} 
+
+.ship {
+  transform: rotate(90deg) translate(0, 1000px);
+  width: 150px;
+}
+
+.meteor1 {
+  transform: translate(1000px, 0);
+  width: 200px;
+  margin-top: 340px;
+  cursor: pointer;
+}
+
+@keyframes ship-in-scene {
+  0% {
+    transform: rotate(90deg) translate(0, 1000px);
+  }
+  100% {
+    transform: rotate(90deg) translate(0, 400px);
+  }
+}
+
+.ship-in-scene {
+  animation: ship-in-scene 2s ease-out forwards;
+}
+
+@keyframes meteor1-in-scene {
+  0% {
+    transform: translate(1000px, 0);
+  }
+  100% {
+    transform: translate(500px, 0);
+  }
+}
+
+.meteor1-in-scene {
+  animation: meteor1-in-scene 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-out {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+@keyframes moving-to-ship {
+  0% {
+    transform: translate(500px, 0);
+  }
+  100% {
+    transform: translate(-200px, 0);
+  }
+}
+
+.moving-to-ship {
+  animation: moving-to-ship 2s ease-in forwards;
+}
+
+@keyframes moving-to-meteor {
+  0% {
+    transform: rotate(90deg) translate(0, 400px);
+  }
+  100% {
+    transform: rotate(90deg) translate(0, 200px);
+  }
+}
+
+.moving-to-meteor {
+  animation: moving-to-meteor 2s linear forwards;
+}
+
+@keyframes going-home {
+  0% {
+    transform: rotate(90deg) translate(0, 200px);
+  }
+  100% {
+    transform: rotate(90deg) translate(0, -1200px);
+  }
+}
+
+.going-home {
+  animation: going-home 2.5s linear forwards;
+}
+
+.go-home {
+  display: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 45%;
+}
+
+.go-home:hover {
+  background-color: #0056b3;
+}
