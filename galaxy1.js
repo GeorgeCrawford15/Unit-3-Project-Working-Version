@@ -180,3 +180,5 @@ restartButton1.addEventListener('click', function() {
 restartButton2.addEventListener('click', function() {
   window.location.href = "options.html";
 });
+
+//hi//
